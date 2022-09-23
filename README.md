@@ -1,7 +1,7 @@
 # VHostScan
 A virtual host scanner that can be used with pivot tools, detect catch-all scenarios, aliases and dynamic default pages. First presented at SecTalks BNE in September 2017 ([slidedeck](https://docs.google.com/presentation/d/1KDY7bnCpCGabJn8UpmHGSb6z_hi_WGf3ETxzykTNjWY)).
 
-[![Build Status](https://travis-ci.org/codingo/VHostScan.svg?branch=master)](https://travis-ci.org/codingo/VHostScan) [![Python 3.2|3.6](https://img.shields.io/badge/python-3.2|3.6-green.svg)](https://www.python.org/) [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
+[![Build Status](https://travis-ci.org/trhacknon/VHostScan.svg?branch=master)](https://travis-ci.org/trhacknon/VHostScan) [![Python 3.2|3.6](https://img.shields.io/badge/python-3.2|3.6-green.svg)](https://www.python.org/) [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
  [![License](https://img.shields.io/badge/license-GPL3-_red.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html) [![Twitter](https://img.shields.io/badge/twitter-@____timk-blue.svg)](https://twitter.com/__timk) [![Twitter](https://img.shields.io/badge/twitter-@codingo__-blue.svg)](https://twitter.com/codingo_)
 
 
@@ -18,7 +18,7 @@ A virtual host scanner that can be used with pivot tools, detect catch-all scena
 
 ## Product Comparisons
 
-![VHOSTScan Feature Map](https://github.com/codingo/codingo.github.io/blob/master/assets/featureMap.PNG)
+![VHOSTScan Feature Map](https://github.com/trhacknon/trhacknon.github.io/blob/master/assets/featureMap.PNG)
 
 # Install Requirements
 
@@ -78,7 +78,7 @@ If your connection requires SSL, you can use:
 $ VHostScan -t example.com --ssl
 ```
 
-![VHOSTScan Wordlist example](https://github.com/codingo/codingo.github.io/blob/master/assets/Bank%20VHOST%20Example.png)
+![VHOSTScan Wordlist example](https://github.com/trhacknon/trhacknon.github.io/blob/master/assets/Bank%20VHOST%20Example.png)
 
 ### Port forwarding
 Say you have an SSH port forward listening on port 4444 fowarding traffic to port 80 on example.com's development machine. You could use the following to make VHostScan connect through your SSH tunnel via localhost:4444 but format the header requests to suit connecting straight to port 80:
@@ -93,7 +93,7 @@ VHostScan Supports piping from other applications and will treat information pas
 $ cat bank.htb | VHostScan -t 10.10.10.29
 ```
 
-![VHOSTScan STDIN Example](https://github.com/codingo/codingo.github.io/blob/master/assets/Bank%20VHOST%20Pipe%20Example.png)
+![VHOSTScan STDIN Example](https://github.com/trhacknon/trhacknon.github.io/blob/master/assets/Bank%20VHOST%20Pipe%20Example.png)
 
 ### STDIN and WordList
 You can still specify a wordlist to use along with stdin. In these cases wordlist information will be appended to stdin. For example:
@@ -103,7 +103,7 @@ $ echo -e 'a.example.com\b.example.com' | VHostScan -t localhost -w ./wordlists/
 ### Fuzzy Logic
 Here is an example with fuzzy logic enabled. You can see the last comparison is much more similar than the first two (it is comparing the content not the actual hashes):
 
-![VHOSTScan Fuzzy Logic Example](https://github.com/codingo/codingo.github.io/blob/master/assets/VHostScan-Fuzzy-Wuzzy.PNG)
+![VHOSTScan Fuzzy Logic Example](https://github.com/trhacknon/trhacknon.github.io/blob/master/assets/VHostScan-Fuzzy-Wuzzy.PNG)
 
 ## Running the tests
 
